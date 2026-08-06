@@ -11,15 +11,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// Endpoints
-app.MapGet("/", () =>
+// Health endpoint
+app.MapGet("/", () => Results.Ok(new
 {
-    return Results.Ok(new
-    {
-        Service = "InventoryService",
-        Version = "1.0.0",
-        Status = "Running"
-    });
-});
+    Service = "Inventory.Api",
+    Version = "1.0.0",
+    Status = "Running"
+}));
 
 app.Run();

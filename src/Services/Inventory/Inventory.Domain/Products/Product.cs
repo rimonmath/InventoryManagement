@@ -1,6 +1,6 @@
 using SharedKernel.Entities;
 
-namespace InventoryService.Domain.Products;
+namespace Inventory.Domain.Products;
 
 public sealed class Product : AggregateRoot
 {
